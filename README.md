@@ -18,3 +18,4 @@ https://digital-products-way.github.io/KDP-Master-Pro/
 ## Privacy
 No login • No ads • No data collection
 
+![KDP Master Pro Preview](preview.png)
