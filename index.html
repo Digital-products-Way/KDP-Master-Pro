@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KDP Master Pro</title>
+<style>
+body{
+  font-family:system-ui,sans-serif;
+  background:#0f172a;
+  color:#e5e7eb;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+.card{
+  background:#111827;
+  padding:20px;
+  border-radius:12px;
+  width:320px;
+}
+input,button{
+  width:100%;
+  margin-top:10px;
+  padding:10px;
+  border-radius:6px;
+  border:none;
+}
+button{
+  background:#f59e0b;
+  font-weight:600;
+}
+#results{display:none;margin-top:15px;}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>KDP Master Pro</h2>
+<input id="p" type="number" placeholder="Pages">
+<button onclick="calculate()">Calculate Now</button>
+<div id="results">Spine (inch): <b id="out"></b></div>
+</div>
+
+<script>
+function calculate(){
+ const pages=Number(document.getElementById('p').value);
+ if(!pages){alert('Enter total pages');return;}
+ const spine=(pages*0.002252).toFixed(3);
+ document.getElementById('out').innerText=spine;
+ document.getElementById('results').style.display='block';
+}
+</script>
+</body>
+</html>
